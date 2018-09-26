@@ -1,0 +1,26 @@
+splinecurves2dv2
+5
+
+points
+1	-1	-1
+2	1	-1
+3	1	1
+4	-1	1
+5	-0.5	-0.5
+6	0.5	-0.5
+7	0.5	0.5
+8	-0.5	0.5
+
+segments
+1	0	2	1	2 -bc=3 # south boundary, 0
+1	0	2	2	3 -bc=2	# east boundary, do nothing
+1	0	2	3	4 -bc=1	# north boundary, 0
+1	0	2	4	1 -bc=4	# west boundary, parabolic flow
+2	1	2	5	6 -bc=5 # ignored
+2	1	2	6	7 -bc=5
+2	1	2	7	8 -bc=5
+2	1	2	8	5 -bc=5
+
+materials
+1	outer	-maxh=0.2
+2	inner	-maxh=0.2
