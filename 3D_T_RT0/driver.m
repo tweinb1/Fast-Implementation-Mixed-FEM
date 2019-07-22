@@ -47,7 +47,6 @@ signs2 = signs_faces(nodes2coord',elems2faces',faces2nodes',B_K);
 [MPV] = mpv_matrix_RT0(elems2faces',B_K,B_K_det,signs2,coeffs);
 time(3) = toc;
 tic;
-%TED NOTE: Set up signs here.
 MPV0 = mat2cell(MPV,size(MPV,1),size(MPV,2),ones(size(MPV,3),1));
 MPVA = assemble(MPV0,elems2faces2,1:ngdof,1:nelem,ngdof);
 time(4) = toc;

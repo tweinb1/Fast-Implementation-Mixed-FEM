@@ -2,6 +2,7 @@ function [T] = driver4(trials)
 
 %test program that takes in number of trials
 %and outputs time
+%Includes non-vectorized
 Time1 = zeros(trials,1); %Standard 1
 Time2 = zeros(trials,1); %Standard assembly
 Time3 = zeros(trials,1); %Vectorized 1
@@ -17,7 +18,7 @@ while (count < trials)
     Time2(count) = Times(2);
     Time3(count) = Times(3);
     Time4(count) = Times(4);
-    Elements(count) = nxyz * nxyz*nxyz;
+    Elements(count) = 6*nxyz * nxyz*nxyz;
     nxyz = nxyz * 2;
 end
 T = table(Elements, DegreesOfFreedom, Time1, Time2, Time3, Time4);
