@@ -24,7 +24,8 @@ coeffs_mean = 1;
 elems2faces = elems2faces';
 nfaces = max(max(elems2faces));
 ngdof = nfaces + nelem;
-
+%Come back to this
+elengdof = nfaces+nelem;
 % test
 %nodes2coord = nodes2coord * 1/4;
 

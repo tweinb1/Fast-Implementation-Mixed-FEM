@@ -21,7 +21,7 @@ while (count < trials)
     Time2(count) = Times(2);
     Time3(count) = Times(3);
     Time4(count) = Times(4);
-    Elements(count) = nxy * nxy;
+    Elements(count) = 2*nxy * nxy;
     nxy = nxy * 2;
 end
 T = table(Elements, DegreesOfFreedom, Time1, Time2, Time3, Time4);
